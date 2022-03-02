@@ -1,0 +1,659 @@
+.pvtUi {
+    color: #2a3f5f;
+    font-family: Verdana;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+
+}
+.pvtUi select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.pvtUi td.pvtOutput {
+    vertical-align: top;
+    overflow-x: auto;
+}
+
+table.pvtTable {
+    font-size: 10pt;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 3px;
+    margin-left: 3px;
+    display: block;
+    overflow-y: scroll;
+    height: 64vh;
+}
+table.pvtTable thead tr th,
+table.pvtTable tbody tr th {
+    background-color: #ebf0f8;
+    border: 1px solid #c8d4e3;
+    font-size: 10pt;
+    padding: 5px;
+}
+
+table.pvtTable tbody tr td {
+    color: #2a3f5f;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #c8d4e3;
+    vertical-align: top;
+    text-align: right;
+}
+
+.pvtRowOrder,
+.pvtColOrder {
+    cursor: pointer;
+    margin-left: 5px;
+    display: inline-block;
+    user-select: none;
+    text-decoration: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.pvtAxisContainer,
+.pvtVals {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.pvtVals {
+    text-align: left;
+    width: 240px;
+}
+
+.pvtUnused {
+    border-width: 1px 0 0 0;
+    border-style: solid none none none;
+    border-color: #dddddd white white white;
+}
+
+.pvtRenderers {
+    padding-left: 5px;
+    user-select: none;
+    width: 245px;
+}
+
+.pvtDropdown {
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    margin: 3px;
+}
+
+.pvtDropdownIcon {
+    float: right;
+    color: #a2b1c6;
+}
+.pvtDropdownCurrent {
+    text-align: left;
+    border: 1px solid #a2b1c6;
+    display: inline-block;
+    position: relative;
+    width: 210px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.pvtDropdownCurrentOpen {
+    border-radius: 0px;
+}
+
+.pvtDropdownMenu {
+    background: white;
+    z-index: 1;
+    position: absolute;
+    width: 210px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 0px;
+    border: 1px solid #a2b1c6;
+    border-top: 1px solid #dfe8f3;
+    box-sizing: border-box;
+}
+
+.pvtDropdownValue {
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: left;
+}
+.pvtDropdownActiveValue {
+    background: #ebf0f8;
+}
+
+.pvtRows {
+    height: 35px;
+    width: 240px;
+}
+
+.pvtAxisContainer li {
+    /* padding: 8px 6px; */
+    list-style-type: none;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.pvtPlaceholder {
+    border: 1px dashed #a2b1c6;
+    width: 200px;
+    height: 28px;
+    cursor: move;
+    margin: 14px;
+    padding: 10px;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.pvtAxisContainer li.pvtPlaceholder span.pvtAttr {
+    display: none;
+}
+
+.pvtAxisContainer li span.pvtAttr {
+    -webkit-text-size-adjust: 100%;
+    background: #f3f6fa;
+    border: 1px solid #c8d4e3;
+    padding: 5px 5px;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    cursor: -webkit-grab;
+    cursor: grab;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f1f2f6;
+    border-radius: 0px;
+    display: inline-block;
+}
+
+.pvtAxisContainer li span.pvtAttr:active {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f1f2f6;
+    border-radius: 0px;
+    display: inline-block;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+.pvtTriangle {
+    cursor: pointer !important;
+    color: #506784;
+    margin-right: 2px;
+}
+
+.pvtTriangleHide {
+    display: none;
+}
+
+.pvtTriangleLabel {
+    max-width: 160px;
+    float: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.pvtTriangleLabelChild {
+    max-width: 160px;
+    float: right;
+    width: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.pvtHorizList li {
+    display: inline-block;
+}
+.pvtVertList {
+    vertical-align: top;
+}
+
+table.pvtTable thead tr th, table.pvtTable tbody tr th {
+    background-color: #f1f2f6;
+}
+
+.pvtFilteredAttribute {
+    font-style: italic;
+}
+
+.sortable-chosen .pvtFilterBox {
+    display: none !important;
+}
+
+.pvtCloseX {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.pvtClearSearchX {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.pvtDragHandle {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 18px;
+    color: #a2b1c6;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.pvtDragHandle:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 18px;
+    color: #a2b1c6;
+}
+
+.pvtButton {
+    color: #506784;
+    border-radius: 5px;
+    padding: 3px 6px;
+    background: #f2f5fa;
+    border: 1px solid;
+    border-color: #c8d4e3;
+    font-size: 14px;
+    margin: 3px;
+    transition: 0.34s all cubic-bezier(0.19, 1, 0.22, 1);
+    text-decoration: none !important;
+}
+
+.pvtButton:hover {
+    background: #e2e8f0;
+    border-color: #a2b1c6;
+}
+
+.pvtButton:active {
+    background: #d1dae6;
+}
+
+.pvtFilterBox input {
+    border: 1px solid #c8d4e3;
+    border-radius: 5px;
+    color: #506784;
+    padding: 0 3px;
+    font-size: 14px;
+}
+
+.pvtFilterBox input:focus {
+    border-color: #119dff;
+    outline: none;
+}
+
+.pvtFilterBox {
+    z-index: 100;
+    width: 300px;
+    border: 1px solid #506784;
+    background-color: #fff;
+    position: absolute;
+    text-align: center;
+    user-select: none;
+    min-height: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.pvtFilterBox h4 {
+    margin: 15px;
+}
+.pvtFilterBox p {
+    margin: 10px auto;
+}
+.pvtFilterBox button {
+    color: #2a3f5f;
+}
+.pvtFilterBox input[type='text'] {
+    width: 230px;
+    color: #2a3f5f;
+    margin-bottom: 5px;
+}
+
+.pvtCheckContainer {
+    text-align: left;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 30vh;
+    border-top: 1px solid #dfe8f3;
+}
+
+.pvtCheckContainer p {
+    margin: 0;
+    margin-bottom: 1px;
+    padding: 3px;
+    cursor: default;
+}
+
+.pvtCheckContainer p.selected {
+    background: #ebf0f8;
+}
+
+.pvtOnly {
+    display: none;
+    width: 35px;
+    float: left;
+    font-size: 12px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.pvtOnlySpacer {
+    display: block;
+    width: 35px;
+    float: left;
+}
+
+.pvtCheckContainer p:hover .pvtOnly {
+    display: block;
+}
+.pvtCheckContainer p:hover .pvtOnlySpacer {
+    display: none;
+}
+
+.pvtRendererArea {
+    padding: 5px;
+}
+
+.pvtSearch {
+    margin-top: 5px;
+}
+.pvtSearchNotFound:focus {
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 2px red;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.pvtCollapsible {
+    min-height: 400px;
+    max-height: 65vh;
+    overflow: overlay;
+    margin-right: 8px;
+    /* overflow: scroll; */
+}
+
+.react-tooltip-lite {
+    background: #333333;
+    color: white;
+}
+
+.pvtCheckContainer > p > label {
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.pvtLabel {
+    max-width: 100%;
+    margin-bottom: 4px;
+    margin-left: 15px;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: left !important;
+}
+
+.pvtIcon {
+    font-size: 12px;
+}
+
+.pvtIconHelp {
+    font-size: 12px;
+    cursor: help;
+}
+
+.pvtIconDrag {
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.pvt-output-title {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: 400;
+}
+
+.pvt-braille-pattern {
+    width: 15px;
+    font-size: 18px;
+    color: #87909a;
+    display: inline;
+    float: left;
+}
+
+.pvt-attr-text-container {
+    width: 140px;
+    display: inline-block;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.pvt-attr-text-container-left {
+    width: 140px;
+    display: inline-block;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+    margin-bottom: -2px;
+    margin-right: 12px;
+}
+
+.pvt-attr-text {
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.pvt-attr-chevron-down {
+    cursor: pointer;
+    margin-top: 0px;
+    width: 15px;
+    font-size: 14px;
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+
+.pvt-attr-chevron-up {
+    cursor: pointer;
+    transform: rotate(180deg);
+    margin-top: 0px;
+    width: 15px;
+    font-size: 14px;
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.pvt-attr-close-visible {
+    cursor: pointer;
+    margin-top: 0px;
+    width: 15px;
+    font-size: 14px;
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.pvt-attr-close-hidden {
+    margin-top: 0px;
+    width: 15px;
+    font-size: 14px;
+    display: none;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.pvt-attr-container {
+}
+
+.pvtDropdownValue2 {
+    text-align: left;
+    padding: 2px 2px 2px 4px;
+    width: 100%;
+}
+
+.pvtDropdownIconOpen {
+    transform: rotate(180deg);
+    float: right;
+    color: #a2b1c6;
+}
+
+.close-icon {
+    border:1px solid transparent;
+    background-color: transparent;
+    display: none;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+}
+.close-icon:after {
+    content: "X";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #999999;
+    z-index:1;
+    left: 185px;
+    top: 0;
+    bottom: 28px;
+    margin: auto;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    font-size: 12px;
+    box-shadow: 0 0 2px #dddddd;
+    cursor: pointer;
+}
+.close-icon-show {
+    display: inline-block;
+}
+
+.attrListOpen {
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    margin: 3px;
+    padding: 3px 0px 3px 0px;
+    border: solid 1px #dddddd;
+}
+
+.attrListClosed {
+    background-color: #EBF0F8;
+    color: #010101;
+    cursor: pointer;
+    margin: 3px;
+    text-align: center;
+    padding: 3px 0px 3px 0px;
+    border: solid 1px #dddddd;
+}
+
+.attrHeaderClosed {
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+    color: #2a3f5f;
+    position: relative;
+    padding: 5px;
+}
+
+.attrHeaderClosed:before {
+    font-family: "Material Icons";
+    content: '\0276F';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    display: block;
+    transition: transform 300ms;
+    font-weight: 600;
+}
+
+.attrHeaderOpen {
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+    color: #2a3f5f;
+    position: relative;
+    padding: 5px;
+    background: white;
+}
+
+.attrHeaderOpen:after {
+    font-family: "Material Icons";
+    content: '\0276F';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    display: block;
+    transition: transform 300ms;
+    font-weight: 600;
+}
+.attrHeaderOpen.is-open:after {
+    transform: rotateZ(90deg);
+}
+.pvtSearchFoundAttr {
+    background-color: #fff59d !important;
+}
+.pvtSearchFoundCat {
+    background-color: #ffeb3b !important;
+}
